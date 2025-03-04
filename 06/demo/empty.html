@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basics</title>
+</head>
+<body>
+    <h1>Look in the Console for the examples!</h1>
+    <!-- <script src="script.js"></script> -->
+     <script>
+        
+
+        //const vs let
+        const number_const= 2;
+
+        let number_let=3;
+
+        //let can be reassigned
+
+        // number_let= 4;
+
+        console.log(number_let);
+
+        //const cannot be
+
+        // console.log not work if not_foo is assigned
+
+        // strings, boolean, number
+
+        //any number
+        let number= 2;
+
+        //any string
+
+        let string= 'name'
+
+        //true or false
+
+        let bool= true;
+
+        //calculations
+
+        //divide num
+        // console.log(number/2);
+
+
+        console.log(number,string)
+        //add space after name so words don't run into eachother
+    let firstname="rahul";
+    let lastname="mukherjee";
+    // console.log(firstname+lastname);
+
+    console.log(`${firstname} ${lastname}`);
+
+
+        //combine strings to make new string
+        console.log(firstname +lastname)
+
+        //print names
+
+        //combine numbers and strings
+
+        //console.log the variable;
+
+        //can do with string numbers, but good to convert
+       let string_number= '10'
+        //divide by two, will be 5
+       console.log(string_number+2)
+        //add 2 will be 102
+
+        //convert string to number and save to variable
+        let converted=numver=Number(string_number)
+        // add to new number, will be 12
+        console.log(converted_number=2);
+        // if-else with boolean
+
+            const time= false;
+           let color= "green"
+            if (color=="green"){
+                console.log("Go");
+            }
+
+            else{
+                console.log("stop");
+                }
+            
+        // if-else with number
+
+        // if-else with string
+        
+        //write function
+        function nu_function(){
+            console.log(number);
+        }
+        //declare function
+
+        //  nu_function();
+        //write function with parameter
+      
+    
+        //declate function with parameter
+       paraFunction(50);
+        //assign variable inside function
+
+        //call function and console.log variable, will not show
+
+        // assign variable outside, assign inside function
+
+        //call function and console.log variable, will show
+
+        // putting it all together, weather analysis
+
+        //let's make an application that tells the summary of today's weather;
+
+        const city_name = 'Minneapolis';
+        const state_name = 'MN';
+        const today_temp = 12;
+        const historic_high = 11;
+
+        //make a function that tells me if today's temperature beat the historic high
+            
+function getTemperature(city,state,temp,high){
+
+
+    let full_name= city_name + ""+ state_name;
+
+    let temp_change= today_temp- historic_high;
+
+    console.log( temp_change);
+
+    if (temp_change >= 0){
+        console.log(full_name+'new high reached');
+    }
+
+    else{
+console.log(full_name+ 'has no new record');
+    }
+}
+
+function getTemperature(city,state,temp,high){}
+           //make full geographic name
+            //get temperature difference
+
+            //if today is more than historical high
+                //concat a sentence
+            //if today is less than historical high
+                //concat a sentence
+
+        //run function
+
+
+     </script>
+</body>
+</html>

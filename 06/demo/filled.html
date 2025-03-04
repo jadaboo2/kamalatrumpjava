@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basics</title>
+</head>
+<body>
+    <h1>Look in the Console for the examples!</h1>
+    <!-- <script src="script.js"></script> -->
+     <script>
+        
+
+        //const vs let
+
+        let foo = 2; //
+
+        const not_foo = 2;
+
+        //let can be reassigned
+
+        foo = 3; //this can be reassigned
+
+        //const cannot be
+
+        // console.log not work if not_foo is assigned
+
+        // not_foo = 4; this cannot be
+
+        // console.log(foo, not_foo); // will not work if not_foo is assigned
+
+        // strings, boolean, number
+
+        let int_ex = 10; //any number
+
+        let str_ex = 'Donna'; //any string
+
+        let bool_ex = true; //true or false
+
+        // calculations
+
+        //divide num
+        console.log(int_ex / 2) //should be 5
+
+        console.log('answer', int_ex / 2); //chain variables
+
+        const last_name = ' Summer'; //add space so words don't run into eachother
+
+        const full_name = str_ex + last_name; //new string
+
+        console.log(full_name); //print names
+
+        const number_strings = int_ex + last_name; //combine numbers and strings
+
+        console.log(number_strings) //console.log this;
+
+        const string_number = '10'; //can do with string numbers, but good to convert
+
+        console.log(string_number / 2); //this will be 5
+
+        console.log(string_number + 2); //this will be 102
+
+        const correct_number = Number(string_number);
+
+        console.log(correct_number + 2); //12
+
+        // if-else
+
+        // if-else with boolean
+
+        const after_6pm = true;
+
+        if (after_6pm) {
+            console.log('After 6 pm');
+        } else {
+            console.log('Before 6 pm');
+        }
+
+        // if-else with number
+
+        const time = 15;
+
+        if (time >= 15) {
+            console.log("it's early!");
+        }
+        else {
+            console.log("it's late!");
+        }
+
+        // if-else with string
+
+        const string = 'Tea Time';
+
+        if (string == 'Tea Time' && time == 14) {
+            console.log("It's time for Tea!");
+        } else {
+            console.log("Not time for tea yet :(");
+        }
+        
+        //write function
+
+        function printSentence(){
+            console.log('This is a Function'); // this won't print yet
+        }
+
+        //declare function
+
+        printSentence(); //this did print!
+
+        //write function with parameter
+
+        function makeCalcuations(number){ 
+            console.log(number * 4);//assign variable inside parameter
+
+        }
+
+        //declate function with parameter
+
+        makeCalcuations(3); //prints 12
+
+        //call function and console.log variable, will not show
+
+        // function assignVariable(){ 
+        //     let item = 3;
+        // }
+
+        // assignVariable();
+
+        // console.log(item); //this does not exist outside the function
+
+        // assign variable outside, assign inside function
+
+        let item; //you should declare this outside
+
+        //call function and console.log variable, will show
+
+        function assignVariable(){ 
+            item = 3;
+        }
+
+        assignVariable();
+
+        console.log(item); //this works!
+
+        // putting it all together, weather analysis
+
+        //let's make an application that tells the summary of today's weather;
+
+        const city_name = 'Minneapolis';
+        const state_name = 'MN';
+        const today_temp = 12;
+        const historic_high = 11;
+
+        //make a function that tells me if today's temperature beat the historic high
+        function printLine(today, city, state, historic){
+            //make full geographic name
+            const full_city = city + ', ' + state;
+
+            //get temperature difference
+            const difference = today - historic;
+
+            //if today is more than historical high
+            if (difference > 0) {
+                //concat a sentence
+                console.log(full_city + " had a temp of " + today + "°F, beating the previous high of " + historic + "°F by " + difference + "°F");
+            }
+            else if (difference == 0) {
+                console.log(full_city + " had a temp of " + today + "°F, matching the previous high of " + historic + "°F");
+            }
+            //if today is less than historical high
+            else {
+                //concat a sentence
+                console.log(full_city + " had a temp of " + today + "°F, lower than the historic high of" + historic + "°F by " + (-1*difference) + "°F");
+            }
+        }
+
+        //run function
+        printLine(today_temp, city_name, state_name, historic_high);
+
+
+     </script>
+</body>
+</html>
